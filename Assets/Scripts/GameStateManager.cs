@@ -79,4 +79,11 @@ public class GameStateManager : MonoBehaviour
         m_State = GAMESTATE.TITLE;
         SceneManager.LoadScene(_instance.m_TitleScreenName);
     }
+
+    //QuitGame
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
 }

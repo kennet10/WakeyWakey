@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InGameTimer : MonoBehaviour
 {
@@ -79,6 +80,8 @@ public class InGameTimer : MonoBehaviour
             if (time == "00:00.00")
             {
                 EndTimer();
+                yield return new WaitForSeconds(2);
+                SceneManager.LoadScene("GameOver");
             }
         }
     }
