@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    private bool paused = false;
+    private bool paused;
     [SerializeField]
     private GameObject pauseMenu;
 
+    public void Start()
+    {
+        paused = false;
+        Time.timeScale = 1;
+    }
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -30,6 +35,7 @@ public class LevelManager : MonoBehaviour
     public void RestartLevel()
     {
         GameStateManager.RestartLevel();
+        Debug.Log("Click");
     }
 
     public void QuitToTitle()
