@@ -9,7 +9,10 @@ public class GameStateManager : MonoBehaviour
     [SerializeField] private string m_TitleScreenName;
     [SerializeField] private string m_GameOverScreenName;
 
+    private int currentLevel;
+
     private static GameStateManager _instance;
+
 
     //States of the game
     enum GAMESTATE
@@ -40,10 +43,24 @@ public class GameStateManager : MonoBehaviour
     public static void NewGame()
     {
         m_State = GAMESTATE.PLAYING;
+
+        _instance.currentLevel = 0;
+
         if (_instance.m_Levels.Count > 0)
         {
-            SceneManager.LoadScene(_instance.m_Levels[0]);
+            SceneManager.LoadScene(_instance.m_Levels[_instance.currentLevel]);
         }
+    }
+
+    //Start the next level
+    public static void NextLevel()
+    {
+        m_State = GAMESTATE.PLAYING;
+
+        _instance.currentLevel++;
+
+        SceneManager.LoadScene(_instance.m_Levels[_instance.currentLevel]);
+
     }
 
     //Pause the game

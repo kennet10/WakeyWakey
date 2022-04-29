@@ -81,7 +81,7 @@ public class InGameTimer : MonoBehaviour
             {
                 EndTimer();
                 yield return new WaitForSeconds(2);
-                SceneManager.LoadScene("GameOver");
+                GameStateManager.EndGame();
             }
         }
     }
