@@ -911,18 +911,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.007396519, y: -0.08136392}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.21, y: 3.03}
+    oldSize: {x: 2.4005861, y: 1.6}
     newSize: {x: 3.21, y: 3.03}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.21, y: 3.03}
+  m_Size: {x: 0.97619176, y: 1.032887}
   m_EdgeRadius: 0
 --- !u!114 &478673246
 MonoBehaviour:
@@ -977,7 +977,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 4c9f375592d3f064fb24b5015f490077, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9182c012743079b48bcf03c6ab177215, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -997,7 +997,7 @@ Transform:
   m_GameObject: {fileID: 478673244}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.37, y: 1.81, z: -0.015769765}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.7181}
+  m_LocalScale: {x: 1, y: 1, z: 0.7181}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1215760499}
@@ -1515,6 +1515,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773289712}
   m_CullTransparentMesh: 1
+--- !u!1 &777407680 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1866430887865794494, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+  m_PrefabInstance: {fileID: 1502612944}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &777407684 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1866430887865794370, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+  m_PrefabInstance: {fileID: 1502612944}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &817323197
 GameObject:
   m_ObjectHideFlags: 0
@@ -2673,6 +2683,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 478673248}
+  - {fileID: 777407684}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2707,7 +2718,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38600387a105ed438ec18d859c88561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alarmClockPrefab: {fileID: 0}
+  alarmClockPrefab: {fileID: 777407680}
 --- !u!212 &1277279711
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2942,6 +2953,91 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1502612944
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1215760499}
+    m_Modifications:
+    - target: {fileID: 1866430887865794369, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9761918
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866430887865794369, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+      propertyPath: m_Size.y
+      value: 1.032887
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866430887865794369, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 2.4005861
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866430887865794369, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866430887865794370, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866430887865794370, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866430887865794370, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866430887865794370, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -9.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866430887865794370, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866430887865794370, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866430887865794370, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866430887865794370, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866430887865794370, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866430887865794370, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866430887865794370, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866430887865794370, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866430887865794370, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1866430887865794371, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9182c012743079b48bcf03c6ab177215, type: 3}
+    - target: {fileID: 1866430887865794494, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+      propertyPath: m_Name
+      value: alarmClock_static
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
 --- !u!1 &1621752809
 GameObject:
   m_ObjectHideFlags: 0
