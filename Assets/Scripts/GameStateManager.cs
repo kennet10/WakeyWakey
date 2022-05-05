@@ -56,7 +56,7 @@ public class GameStateManager : MonoBehaviour
     public static void NextLevel()
     {
         m_State = GAMESTATE.PLAYING;
-
+        Debug.Log(_instance.currentLevel);
         _instance.currentLevel++;
 
         SceneManager.LoadScene(_instance.m_Levels[_instance.currentLevel]);

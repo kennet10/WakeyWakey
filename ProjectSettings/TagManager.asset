@@ -44,3 +44,6 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Portals
+    uniqueID: 1643537819
+    locked: 0
