@@ -12,9 +12,13 @@ public class EnemyController : MonoBehaviour
     private GameObject player;
     private GameObject clock;
 
+    //finds Patroller script on this enemy object
+    private Patroller patrolPath;
+
     //reference variables for starting positions
     private Vector3 alarmClockOriginalPos;
     private Vector3 playerOriginalPos;
+    private Vector3 enemyOriginalPos;
 
     private void Awake()
     {
@@ -25,13 +29,22 @@ public class EnemyController : MonoBehaviour
         //finds clock's starting point in the scene and records it
         clock = GameObject.Find("alarmClock");
         alarmClockOriginalPos = clock.transform.position;
+
+        //finds enemy's starting point in the scene and records it
+        patrolPath = GetComponent<Patroller>();
+        enemyOriginalPos = transform.position;
     }
 
-    void RestartObjects() //Puts Objects and Players Back to Starting Positions
+    void RestartObjects()
     {
+        //resets the player's position
         player.transform.position = playerOriginalPos;
 
-        try //Try to find alarm clock and reset its location
+        //resets this enemy object's position and their patrol path
+        transform.position = enemyOriginalPos;
+        patrolPath.nextPoint = 0;
+
+        try //Try to find alarm clock and reset its position
         {
             clock = GameObject.Find("alarmClock");
             clock.transform.position = alarmClockOriginalPos;

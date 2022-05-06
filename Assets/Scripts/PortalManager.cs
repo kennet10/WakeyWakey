@@ -18,11 +18,17 @@ public class PortalManager : MonoBehaviour
     //boolean variable to check if door is open
     private bool isOpen;
 
+    //boolean variabel to check if player has pressed the key already
+    private bool isPressed;
+
 
     private void Start()
     {
         //sets object reference to current game object this script is on
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
+        //sets boolean to false from the start
+        isPressed = false;
 
     }
 
@@ -55,16 +61,17 @@ public class PortalManager : MonoBehaviour
     }
 
     //if player stays within the portal's collider, they can press "R" to enter
-    //the next level. this only works when the portal is open
+    //the next level. this only works when the portal is open, and only once
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Player")
         {
 
-            if (Input.GetKey(KeyCode.R) && isOpen == true)
+            if (Input.GetKey(KeyCode.R) == true && isOpen == true && isPressed == false)
             {
                 GameStateManager.NextLevel();
                 Debug.Log("You have been sent to the next level.");
+                isPressed = true;
             }
         }
     }

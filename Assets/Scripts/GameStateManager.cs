@@ -48,6 +48,7 @@ public class GameStateManager : MonoBehaviour
 
         if (_instance.m_Levels.Count > 0)
         {
+            Debug.Log("Level Index:" + _instance.currentLevel);
             SceneManager.LoadScene(_instance.m_Levels[_instance.currentLevel]);
         }
     }
@@ -56,11 +57,13 @@ public class GameStateManager : MonoBehaviour
     public static void NextLevel()
     {
         m_State = GAMESTATE.PLAYING;
-        Debug.Log(_instance.currentLevel);
         _instance.currentLevel++;
 
-        SceneManager.LoadScene(_instance.m_Levels[_instance.currentLevel]);
-
+        if (_instance.m_Levels.Count >= _instance.currentLevel)
+        {
+            Debug.Log("Level Index:" + _instance.currentLevel);
+            SceneManager.LoadScene(_instance.m_Levels[_instance.currentLevel]);
+        }
     }
 
     //Pause the game
