@@ -10,6 +10,7 @@ public class AlarmClock : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             Destroy(gameObject);
+            FindObjectOfType<AudioManager>().Play("Grab Alarm");
         }
     }
 }

@@ -24,16 +24,21 @@ public class InGameTimer : MonoBehaviour
     //state of the timer
     private bool TimerActive;
 
+    private AudioManager audioManager;
+
 
     //Starts running once the object to which this script is attached is enabled
     private void Start()
     {
+        audioManager = FindObjectOfType<AudioManager>();
+
         //Zeros timer and deactivates it
         TimeDisplay.text = "00:00.00";
         TimerActive = false;
 
         //For now, the timer is started as soon as the object is enabled
         StartTimer();
+
     }
 
     //Function that activates timer and calls the coroutine when called
@@ -76,10 +81,24 @@ public class InGameTimer : MonoBehaviour
             //so the line below is used to stabilize it
             yield return null;
 
+            //Play 30 Seconds audio when 30 seconds left
+            if(time == "00:30.00")
+            {
+                audioManager.Play("30 Seconds");
+            }
+
+            //Play 15 Seconds audio when 15 seconds left
+            if(time == "00:15.00")
+            {
+                audioManager.Play("15 Seconds");
+            }
+
             //If the timer reaches zero, the timer will be deactivated and the end screen will be called
             if (time == "00:00.00")
             {
                 EndTimer();
+                audioManager.Play("Game Over");
+
                 yield return new WaitForSeconds(2);
                 GameStateManager.EndGame();
             }
