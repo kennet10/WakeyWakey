@@ -1,15 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameStateManager : MonoBehaviour
 {
     [SerializeField] private List<string> m_Levels = new List<string>();
     [SerializeField] private string m_TitleScreenName;
-    [SerializeField] private string m_GameOverScreenName;
+    [SerializeField] private string m_GameOverScreenName, m_VictoryScreenName;
 
-    private int currentLevel;
+    public int currentLevel, previousLevel;
 
     private static GameStateManager _instance;
 
@@ -39,6 +40,11 @@ public class GameStateManager : MonoBehaviour
         }
     }
 
+    public static int GetCurrentLevel()
+    {
+        return _instance.currentLevel;
+    }
+
     //Start a new game
     public static void NewGame()
     {
@@ -64,6 +70,10 @@ public class GameStateManager : MonoBehaviour
             Debug.Log("Level Index:" + _instance.currentLevel);
             SceneManager.LoadScene(_instance.m_Levels[_instance.currentLevel]);
         }
+        else
+        {
+            SceneManager.LoadScene(_instance.m_VictoryScreenName);
+        }
     }
 
     //Pause the game
@@ -84,6 +94,18 @@ public class GameStateManager : MonoBehaviour
     public static void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    //Restarts previous level
+    public static void RestartPreviousLevel(int previousLevel)
+    {
+        SceneManager.LoadScene(_instance.m_Levels[previousLevel]);
+
+        if (_instance.m_Levels.Count <= _instance.currentLevel)
+        {
+            Debug.Log("Level Index:" + _instance.currentLevel);
+            SceneManager.LoadScene(_instance.m_TitleScreenName);
+        }
     }
 
     //End the game

@@ -26,11 +26,13 @@ public class InGameTimer : MonoBehaviour
 
     private AudioManager audioManager;
 
-
     //Starts running once the object to which this script is attached is enabled
     private void Start()
     {
         audioManager = FindObjectOfType<AudioManager>();
+
+        //Records level num 
+        LevelRecorder.SetPreviousLevel();
 
         //Zeros timer and deactivates it
         TimeDisplay.text = "00:00.00";
@@ -82,11 +84,11 @@ public class InGameTimer : MonoBehaviour
             yield return null;
 
             //Play 30 Seconds audio when 30 seconds left
-            if(time == "00:30.00")
+            if (time == "00:30.00")
             {
                 audioManager.Play("30 Seconds");
             }
-
+ 
             //Play 15 Seconds audio when 15 seconds left
             if(time == "00:15.00")
             {
@@ -98,8 +100,10 @@ public class InGameTimer : MonoBehaviour
             {
                 EndTimer();
                 audioManager.Play("Game Over");
-
+                LevelRecorder.SetPreviousLevel();
+                Debug.Log("Previous Level Set");
                 yield return new WaitForSeconds(2);
+
                 GameStateManager.EndGame();
             }
         }

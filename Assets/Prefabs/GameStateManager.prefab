@@ -47,5 +47,7 @@ MonoBehaviour:
   m_Levels:
   - Tutorial
   - Level 1
+  - Level 2
   m_TitleScreenName: Title
   m_GameOverScreenName: GameOver
+  m_VictoryScreenName: Victory

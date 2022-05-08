@@ -66,14 +66,14 @@ public class Patroller : MonoBehaviour
             if(nextPoint == patrolPoints.Count - 1)
             {
                 changeValue = -1;
-                Debug.Log(nextPoint);
+                //Debug.Log(nextPoint);
             }
 
             //if the object is back at the starting point, it will switch directions again
             if(nextPoint == 0)
             {
                 changeValue = 1;
-                Debug.Log(nextPoint);
+                //Debug.Log(nextPoint);
             }
 
             //once the direction has been determined, this sets the next waypoint 

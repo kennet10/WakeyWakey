@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
 
     [SerializeField] private float moveSpeed;
-    [SerializeField] private float jumpForce;
+    [SerializeField] public float jumpForce;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     private bool isJumping, doubleJumping, doubleJumpingEnabled;
@@ -72,6 +72,12 @@ public class PlayerController : MonoBehaviour
     //Indirectly changes jump force from other scripts
     public void ChangeJumpForce(float change) {
         jumpForce += change;
+    }
+
+    //Resets jump force
+    public void SetJumpForce(float force)
+    {
+        jumpForce = force;
     }
 
     //Enables double jumping
