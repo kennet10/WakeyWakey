@@ -1053,6 +1053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alarmClockPrefab: {fileID: 1465234454}
   jumpPrefab: {fileID: 327690792}
+  speedPrefab: {fileID: 0}
 --- !u!19719996 &382129787
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -2079,7 +2080,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 7
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -2103,7 +2104,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695192098}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.8663864, y: -1.5312144, z: 3.819747}
+  m_LocalPosition: {x: 0.23337269, y: 0.46303594, z: 3.819747}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2758,14 +2759,14 @@ MonoBehaviour:
   m_Follow: {fileID: 842507444}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 5
+    OrthographicSize: 7
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.87328, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
