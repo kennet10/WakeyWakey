@@ -237,6 +237,10 @@ PrefabInstance:
       propertyPath: jumpPrefab
       value: 
       objectReference: {fileID: 3253990531911490092, guid: 5c561f2f295054142a052ee44c18e25d, type: 3}
+    - target: {fileID: 1951468238826309538, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
+      propertyPath: speedPrefab
+      value: 
+      objectReference: {fileID: 1144430882}
     - target: {fileID: 1951468239897130368, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -767,6 +771,10 @@ PrefabInstance:
       propertyPath: jumpPrefab
       value: 
       objectReference: {fileID: 3253990531911490092, guid: 5c561f2f295054142a052ee44c18e25d, type: 3}
+    - target: {fileID: 1951468238826309538, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
+      propertyPath: speedPrefab
+      value: 
+      objectReference: {fileID: 1144430882}
     - target: {fileID: 1951468238826309538, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
       propertyPath: alarmClockPrefab
       value: 
@@ -2320,6 +2328,11 @@ Transform:
   m_Father: {fileID: 326431150}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1144430882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4489182704269863947, guid: 75e18752295f1ef4d91f8c48cb0e167c, type: 3}
+  m_PrefabInstance: {fileID: 4489182705411657001}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1144430884 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4489182704269863949, guid: 75e18752295f1ef4d91f8c48cb0e167c, type: 3}
