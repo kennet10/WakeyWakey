@@ -6,8 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
 
-    [SerializeField] private float moveSpeed;
-    [SerializeField] public float jumpForce;
+    [SerializeField] public float jumpForce, moveSpeed;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     private bool isJumping, doubleJumping, doubleJumpingEnabled;
@@ -69,12 +68,18 @@ public class PlayerController : MonoBehaviour
         moveSpeed += change;
     }
 
+    //Main use to reset move speed in enemy controller script
+    public void SetMoveSpeed(float speed)
+    {
+        moveSpeed = speed;
+    }
+
     //Indirectly changes jump force from other scripts
     public void ChangeJumpForce(float change) {
         jumpForce += change;
     }
 
-    //Resets jump force
+    //Main use to reset jump force in enemy controller script
     public void SetJumpForce(float force)
     {
         jumpForce = force;

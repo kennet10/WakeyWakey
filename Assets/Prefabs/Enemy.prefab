@@ -98,7 +98,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38600387a105ed438ec18d859c88561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alarmClockPrefab: {fileID: 1866430887865794494, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+  alarmClockPrefab: {fileID: 681494711545637002, guid: 13bf02ecb06ff6941afb6d4f40b7ab17, type: 3}
+  jumpPrefab: {fileID: 3253990531911490092, guid: 5c561f2f295054142a052ee44c18e25d, type: 3}
+  speedPrefab: {fileID: 4489182704269863947, guid: 75e18752295f1ef4d91f8c48cb0e167c, type: 3}
 --- !u!58 &1951468238826309533
 CircleCollider2D:
   m_ObjectHideFlags: 0

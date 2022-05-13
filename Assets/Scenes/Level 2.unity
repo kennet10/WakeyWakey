@@ -240,7 +240,7 @@ PrefabInstance:
     - target: {fileID: 1951468238826309538, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
       propertyPath: speedPrefab
       value: 
-      objectReference: {fileID: 1144430882}
+      objectReference: {fileID: 4489182704269863947, guid: 75e18752295f1ef4d91f8c48cb0e167c, type: 3}
     - target: {fileID: 1951468239897130368, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -774,11 +774,11 @@ PrefabInstance:
     - target: {fileID: 1951468238826309538, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
       propertyPath: speedPrefab
       value: 
-      objectReference: {fileID: 1144430882}
+      objectReference: {fileID: 4489182704269863947, guid: 75e18752295f1ef4d91f8c48cb0e167c, type: 3}
     - target: {fileID: 1951468238826309538, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
       propertyPath: alarmClockPrefab
       value: 
-      objectReference: {fileID: 1866430887865794494, guid: 2b282ae699baa4142a3801941d23ce7f, type: 3}
+      objectReference: {fileID: 681494711545637002, guid: 13bf02ecb06ff6941afb6d4f40b7ab17, type: 3}
     - target: {fileID: 1951468239897130368, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -924,9 +924,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e38600387a105ed438ec18d859c88561, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alarmClockPrefab: {fileID: 1465234454}
+  alarmClockPrefab: {fileID: 681494711545637002, guid: 13bf02ecb06ff6941afb6d4f40b7ab17, type: 3}
   jumpPrefab: {fileID: 327690792}
-  speedPrefab: {fileID: 0}
+  speedPrefab: {fileID: 4489182704269863947, guid: 75e18752295f1ef4d91f8c48cb0e167c, type: 3}
 --- !u!19719996 &382129787
 TilemapCollider2D:
   m_ObjectHideFlags: 0
@@ -2094,7 +2094,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695192098}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.057251, y: 0.45966566, z: 3.819747}
+  m_LocalPosition: {x: 0.90186596, y: 0.4618057, z: 3.819747}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2328,11 +2328,6 @@ Transform:
   m_Father: {fileID: 326431150}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1144430882 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4489182704269863947, guid: 75e18752295f1ef4d91f8c48cb0e167c, type: 3}
-  m_PrefabInstance: {fileID: 4489182705411657001}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1144430884 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4489182704269863949, guid: 75e18752295f1ef4d91f8c48cb0e167c, type: 3}
@@ -2885,7 +2880,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.0383418, y: 1}
+    m_SensorSize: {x: 1.87328, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -2925,11 +2920,6 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 1360749806}
   m_Damping: 0.5
   m_MaxWindowSize: -1
---- !u!1 &1465234454 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8923496561444580331, guid: d38e8fb71716dec49aca4ea6c14e0dc1, type: 3}
-  m_PrefabInstance: {fileID: 1575589628}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1575589628
 PrefabInstance:
   m_ObjectHideFlags: 0

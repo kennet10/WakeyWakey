@@ -28,7 +28,7 @@ public class EnemyController : MonoBehaviour
     private Vector3 speedOriginalPos;
 
     //reference variable for player jump force
-    private float playerJumpForce;
+    private float playerJumpForce, playerMoveSpeed;
 
     //is there a power up in the level?
     private bool isJump;
@@ -36,11 +36,14 @@ public class EnemyController : MonoBehaviour
 
     private void Awake()
     {
-        //finds player's starting point and jump force in the scene and records it
+        //finds player's starting point in the scene and records it
         player = GameObject.Find("Player");
         playerOriginalPos = player.transform.position;
         PlayerController playerScript = player.GetComponent<PlayerController>();
+        //finds player's startin jump force in the scene and records it
         playerJumpForce = playerScript.jumpForce;
+        //finds player's starting move speed in the scene and records it
+        playerMoveSpeed = playerScript.moveSpeed;
 
         //finds clock's starting point in the scene and records it
         clock = GameObject.Find("alarmClock");
@@ -79,6 +82,8 @@ public class EnemyController : MonoBehaviour
         //resets player jump force
         PlayerController playerScript = player.GetComponent<PlayerController>();
         playerScript.SetJumpForce(playerJumpForce);
+        //resets player move speed
+        playerScript.SetMoveSpeed(playerMoveSpeed);
 
         //resets this enemy object's position and their patrol path
         transform.position = enemyOriginalPos;
@@ -133,7 +138,7 @@ public class EnemyController : MonoBehaviour
                 GameObject powerup_speed = Instantiate(speedPrefab);
 
                 //necessary to prevent multiple prefabs of powerup to spawn
-                powerup_speed.name = "powerup_jump";
+                powerup_speed.name = "powerup_speed";
 
                 powerup_speed.transform.position = speedOriginalPos;
             }

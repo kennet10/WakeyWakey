@@ -1187,11 +1187,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773289712}
   m_CullTransparentMesh: 1
---- !u!1 &777407680 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8923496561444580331, guid: d38e8fb71716dec49aca4ea6c14e0dc1, type: 3}
-  m_PrefabInstance: {fileID: 7075231811429489029}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &804060612
 GameObject:
   m_ObjectHideFlags: 0
@@ -3317,7 +3312,7 @@ PrefabInstance:
     - target: {fileID: 1951468238826309538, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
       propertyPath: alarmClockPrefab
       value: 
-      objectReference: {fileID: 777407680}
+      objectReference: {fileID: 681494711545637002, guid: 13bf02ecb06ff6941afb6d4f40b7ab17, type: 3}
     - target: {fileID: 1951468239897130368, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
       propertyPath: m_RootOrder
       value: 3
