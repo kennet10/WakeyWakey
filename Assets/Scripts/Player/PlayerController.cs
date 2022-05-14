@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Rigidbody2D rb;
 
-    [SerializeField] public float jumpForce, moveSpeed;
+    [SerializeField] public float jumpForce, moveSpeed, fallMultiplier;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
     private bool isJumping, doubleJumping, doubleJumpingEnabled;
@@ -30,16 +30,27 @@ public class PlayerController : MonoBehaviour
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         moveVertical = Input.GetAxisRaw("Vertical");
         Flip();
+
+        if(rb.velocity.y < 0)
+        {
+            rb.velocity += Vector2.up * Physics2D.gravity * fallMultiplier * Time.deltaTime;
+        }
     }
 
     //Movement update
     void FixedUpdate() {
         if (moveHorizontal > 0.1f || moveHorizontal < -0.1f) {
-            rb.AddForce(new Vector2(moveHorizontal * moveSpeed, 0f), ForceMode2D.Impulse);
+            rb.velocity = new Vector2(moveSpeed * moveHorizontal, rb.velocity.y);
+            //rb.AddForce(new Vector2(moveHorizontal * moveSpeed, 0f), ForceMode2D.Impulse);
             audioManager.Play("Footsteps");
         }
+        else if(moveHorizontal == 0)
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }
         if (moveVertical > 0.1f && !isJumping || !doubleJumping && doubleJumpingEnabled) {
-            rb.AddForce(new Vector2(0f, moveVertical * jumpForce), ForceMode2D.Impulse);
+            rb.velocity = new Vector2(rb.velocity.x, jumpForce * moveVertical);
+            //rb.AddForce(new Vector2(0f, moveVertical * jumpForce), ForceMode2D.Impulse);
             doubleJumping = !doubleJumping;
             audioManager.Play("Jump");
         }
@@ -65,7 +76,7 @@ public class PlayerController : MonoBehaviour
 
     //Indirectly changes move speed from other scripts
     public void ChangeMoveSpeed(float change) {
-        moveSpeed += change;
+        moveSpeed *= change;
     }
 
     //Main use to reset move speed in enemy controller script
