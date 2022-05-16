@@ -40,22 +40,27 @@ public class EnemyController : MonoBehaviour
         player = GameObject.Find("Player");
         playerOriginalPos = player.transform.position;
         PlayerController playerScript = player.GetComponent<PlayerController>();
+        Debug.Log("Recorded Player pos");
         //finds player's startin jump force in the scene and records it
         playerJumpForce = playerScript.jumpForce;
+        Debug.Log("Recorded Player jump");
         //finds player's starting move speed in the scene and records it
         playerMoveSpeed = playerScript.moveSpeed;
+        Debug.Log("Recorded Player move");
 
         //finds clock's starting point in the scene and records it
         clock = GameObject.Find("alarmClock");
         alarmClockOriginalPos = clock.transform.position;
+        Debug.Log("Recorded Alarm pos");
 
-        if(GameObject.Find("powerup_jump") == true)
+        if (GameObject.Find("powerup_jump") == true)
         {
             isJump = true;
 
             //finds jump boost's starting point in the scene and records it
             jump = GameObject.Find("powerup_jump");
             jumpOriginalPos = jump.transform.position;
+            Debug.Log("Recorded Jump pos");
 
         }
 
@@ -66,6 +71,7 @@ public class EnemyController : MonoBehaviour
             //finds jump boost's starting point in the scene and records it
             speed = GameObject.Find("powerup_speed");
             speedOriginalPos = speed.transform.position;
+            Debug.Log("Recorded Speed pos");
 
         }
 
@@ -77,6 +83,7 @@ public class EnemyController : MonoBehaviour
 
     void RestartObjects()
     {
+        Debug.Log("Restart");
         //resets the player's position
         player.transform.position = playerOriginalPos;
         //resets player jump force
@@ -85,9 +92,15 @@ public class EnemyController : MonoBehaviour
         //resets player move speed
         playerScript.SetMoveSpeed(playerMoveSpeed);
 
-        //resets this enemy object's position and their patrol path
-        transform.position = enemyOriginalPos;
-        patrolPath.nextPoint = 0;
+        try //resets this enemy object's position and their patrol path if it is recorded
+        {
+            transform.position = enemyOriginalPos;
+            patrolPath.nextPoint = 0;
+        }
+        catch
+        {
+            Debug.Log("no enemy reset");
+        }
 
         try //Try to find alarm clock and reset its position
         {
