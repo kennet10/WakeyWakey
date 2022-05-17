@@ -9,13 +9,14 @@ public class EnemyController : MonoBehaviour
     public GameObject alarmClockPrefab;
     public GameObject jumpPrefab;
     public GameObject speedPrefab;
+    public GameObject doorPrefab;
 
     //reference variables for player object and clock object, and the powerup objects
     private GameObject player;
     private GameObject clock;
     private GameObject jump;
     private GameObject speed;
-
+    private GameObject door;
 
     //finds Patroller script on this enemy object
     private Patroller patrolPath;
@@ -26,6 +27,7 @@ public class EnemyController : MonoBehaviour
     private Vector3 enemyOriginalPos;
     private Vector3 jumpOriginalPos;
     private Vector3 speedOriginalPos;
+    private Vector3 doorOriginalPos;
 
     //reference variable for player jump force
     private float playerJumpForce, playerMoveSpeed;
@@ -33,6 +35,7 @@ public class EnemyController : MonoBehaviour
     //is there a power up in the level?
     private bool isJump;
     private bool isSpeed;
+    private bool isDoor;
 
     private void Awake()
     {
@@ -72,6 +75,17 @@ public class EnemyController : MonoBehaviour
             speed = GameObject.Find("powerup_speed");
             speedOriginalPos = speed.transform.position;
             Debug.Log("Recorded Speed pos");
+
+        }
+
+        if (GameObject.Find("Door") == true)
+        {
+            isDoor = true;
+
+            //finds door's starting point in the scene and records it
+            door = GameObject.Find("Door");
+            doorOriginalPos = door.transform.position;
+            Debug.Log("Recorded Door pos");
 
         }
 
@@ -145,7 +159,7 @@ public class EnemyController : MonoBehaviour
                 speed = GameObject.Find("powerup_speed");
                 speed.transform.position = speedOriginalPos;
             }
-            catch //Makes new jump if none is found, then places it at starting point
+            catch //Makes new speed if none is found, then places it at starting point
             {
 
                 GameObject powerup_speed = Instantiate(speedPrefab);
@@ -154,6 +168,26 @@ public class EnemyController : MonoBehaviour
                 powerup_speed.name = "powerup_speed";
 
                 powerup_speed.transform.position = speedOriginalPos;
+            }
+        }
+
+        //for the Door prefab
+        if (isDoor == true)
+        {
+            try //Try to find Door and reset its position
+            {
+                door = GameObject.Find("Door");
+                door.transform.position = doorOriginalPos;
+            }
+            catch //Makes new Door if none is found, then places it at starting point
+            {
+
+                GameObject Door = Instantiate(doorPrefab);
+
+                //necessary to prevent multiple prefabs of powerup to spawn
+                Door.name = "Door";
+
+                Door.transform.position = doorOriginalPos;
             }
         }
     }
