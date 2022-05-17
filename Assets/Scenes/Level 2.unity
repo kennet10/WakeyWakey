@@ -237,14 +237,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -5.6
       objectReference: {fileID: 0}
-    - target: {fileID: 1951468238826309538, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
-      propertyPath: jumpPrefab
-      value: 
-      objectReference: {fileID: 3253990531911490092, guid: 5c561f2f295054142a052ee44c18e25d, type: 3}
-    - target: {fileID: 1951468238826309538, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
-      propertyPath: speedPrefab
-      value: 
-      objectReference: {fileID: 4489182704269863947, guid: 75e18752295f1ef4d91f8c48cb0e167c, type: 3}
+    - target: {fileID: 1951468238826309537, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1951468239897130368, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -779,18 +775,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -5.1
       objectReference: {fileID: 0}
-    - target: {fileID: 1951468238826309538, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
-      propertyPath: jumpPrefab
-      value: 
-      objectReference: {fileID: 3253990531911490092, guid: 5c561f2f295054142a052ee44c18e25d, type: 3}
-    - target: {fileID: 1951468238826309538, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
-      propertyPath: speedPrefab
-      value: 
-      objectReference: {fileID: 4489182704269863947, guid: 75e18752295f1ef4d91f8c48cb0e167c, type: 3}
-    - target: {fileID: 1951468238826309538, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
-      propertyPath: alarmClockPrefab
-      value: 
-      objectReference: {fileID: 681494711545637002, guid: 13bf02ecb06ff6941afb6d4f40b7ab17, type: 3}
+    - target: {fileID: 1951468238826309537, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1951468239897130368, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -1250,7 +1238,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695192098}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.90186596, y: 0.4618057, z: 3.819747}
+  m_LocalPosition: {x: 3.6473846, y: 0.45672548, z: 3.819747}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2036,7 +2024,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.87328, y: 1}
+    m_SensorSize: {x: 2.2655137, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0

@@ -99,9 +99,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1376106211437452666}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 08b29d5515170684fb68ac7064fa306a, type: 2}
+  m_Controller: {fileID: 9100000, guid: c09e267c3bd57114d9ad4986eba6fa6f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -210,6 +210,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 0
+  animator: {fileID: 0}
 --- !u!82 &1453490709
 AudioSource:
   m_ObjectHideFlags: 0

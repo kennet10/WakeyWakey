@@ -15,6 +15,8 @@ public class PlayerController : MonoBehaviour
 
     private AudioManager audioManager;
 
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start() {
         rb = gameObject.GetComponent<Rigidbody2D>();
@@ -23,12 +25,18 @@ public class PlayerController : MonoBehaviour
         doubleJumpingEnabled = false;
 
         audioManager = FindObjectOfType<AudioManager>();
+
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update() {
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         moveVertical = Input.GetAxisRaw("Vertical");
+
+        animator.SetFloat("Speed", Mathf.Abs(moveHorizontal));
+        animator.SetBool("IsJumping", isJumping);
+
         Flip();
 
         if(rb.velocity.y < 0)
@@ -52,7 +60,9 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, jumpForce * moveVertical);
             //rb.AddForce(new Vector2(0f, moveVertical * jumpForce), ForceMode2D.Impulse);
             doubleJumping = !doubleJumping;
+
             audioManager.Play("Jump");
+            
         }
     }
 
