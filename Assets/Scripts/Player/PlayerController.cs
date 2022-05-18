@@ -24,13 +24,16 @@ public class PlayerController : MonoBehaviour
         doubleJumping = false;
         doubleJumpingEnabled = false;
 
-        audioManager = FindObjectOfType<AudioManager>();
-
         animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update() {
+        if(audioManager == null)
+        {
+            audioManager = FindObjectOfType<AudioManager>();
+        }
+
         moveHorizontal = Input.GetAxisRaw("Horizontal");
         moveVertical = Input.GetAxisRaw("Vertical");
 
@@ -50,7 +53,11 @@ public class PlayerController : MonoBehaviour
         if (moveHorizontal > 0.1f || moveHorizontal < -0.1f) {
             rb.velocity = new Vector2(moveSpeed * moveHorizontal, rb.velocity.y);
             //rb.AddForce(new Vector2(moveHorizontal * moveSpeed, 0f), ForceMode2D.Impulse);
-            audioManager.Play("Footsteps");
+
+            if (!isJumping)
+            {
+                audioManager.Play("Footsteps");
+            }
         }
         else if(moveHorizontal == 0)
         {

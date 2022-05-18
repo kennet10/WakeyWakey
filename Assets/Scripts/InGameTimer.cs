@@ -86,6 +86,10 @@ public class InGameTimer : MonoBehaviour
             //Play 30 Seconds audio when 30 seconds left
             if (time == "00:30.00")
             {
+                if(audioManager == null)
+                {
+                    audioManager = FindObjectOfType<AudioManager>();
+                }
                 audioManager.Play("30 Seconds");
             }
  
