@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class DoorDestroy : MonoBehaviour
 {
-    public GameObject Door;
+    private GameObject Lever;
     private Interaction lever_interact;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        lever_interact = Door.GetComponent<Interaction>();
+        Lever = GameObject.Find("Interaction");
+        lever_interact = Lever.GetComponent<Interaction>();
     }
 
     // Update is called once per frame
@@ -20,6 +22,8 @@ public class DoorDestroy : MonoBehaviour
         {
             Debug.Log("Door has been destroyed");
             Destroy(gameObject);
+
+            lever_interact.ResetLeverTrigger();
         }
     }
 }

@@ -6,17 +6,10 @@ using UnityEngine.SceneManagement;
 public class EnemyController : MonoBehaviour
 {
     //reference variable for alarm clock prefab and powerup prefabs
-    public GameObject alarmClockPrefab;
-    public GameObject jumpPrefab;
-    public GameObject speedPrefab;
-    public GameObject doorPrefab;
+    public GameObject alarmClockPrefab, jumpPrefab, speedPrefab, doorPrefab;
 
     //reference variables for player object and clock object, and the powerup objects
-    private GameObject player;
-    private GameObject clock;
-    private GameObject jump;
-    private GameObject speed;
-    private GameObject door;
+    private GameObject player, clock, jump, speed, door;
 
     //finds Patroller script on this enemy object
     private Patroller patrolPath;
@@ -43,18 +36,14 @@ public class EnemyController : MonoBehaviour
         player = GameObject.Find("Player");
         playerOriginalPos = player.transform.position;
         PlayerController playerScript = player.GetComponent<PlayerController>();
-        Debug.Log("Recorded Player pos");
         //finds player's startin jump force in the scene and records it
         playerJumpForce = playerScript.jumpForce;
-        Debug.Log("Recorded Player jump");
         //finds player's starting move speed in the scene and records it
         playerMoveSpeed = playerScript.moveSpeed;
-        Debug.Log("Recorded Player move");
 
         //finds clock's starting point in the scene and records it
         clock = GameObject.Find("alarmClock");
         alarmClockOriginalPos = clock.transform.position;
-        Debug.Log("Recorded Alarm pos");
 
         if (GameObject.Find("powerup_jump") == true)
         {
@@ -63,7 +52,6 @@ public class EnemyController : MonoBehaviour
             //finds jump boost's starting point in the scene and records it
             jump = GameObject.Find("powerup_jump");
             jumpOriginalPos = jump.transform.position;
-            Debug.Log("Recorded Jump pos");
 
         }
 
@@ -74,7 +62,6 @@ public class EnemyController : MonoBehaviour
             //finds jump boost's starting point in the scene and records it
             speed = GameObject.Find("powerup_speed");
             speedOriginalPos = speed.transform.position;
-            Debug.Log("Recorded Speed pos");
 
         }
 
@@ -85,7 +72,6 @@ public class EnemyController : MonoBehaviour
             //finds door's starting point in the scene and records it
             door = GameObject.Find("Door");
             doorOriginalPos = door.transform.position;
-            Debug.Log("Recorded Door pos");
 
         }
 
