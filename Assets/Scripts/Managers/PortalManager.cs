@@ -21,7 +21,6 @@ public class PortalManager : MonoBehaviour
     //boolean variabel to check if player has pressed the key already
     private bool isPressed;
 
-
     private void Start()
     {
         //sets object reference to current game object this script is on
@@ -66,10 +65,13 @@ public class PortalManager : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            FindObjectOfType<AudioManager>().Play("Portal");
 
             if (Input.GetKey(KeyCode.R) == true && isOpen == true && isPressed == false)
             {
+
                 GameStateManager.NextLevel();
+
                 Debug.Log("You have been sent to the next level.");
                 isPressed = true;
             }

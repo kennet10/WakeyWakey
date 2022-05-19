@@ -23,7 +23,6 @@ public class DoorDestroy : MonoBehaviour
             Debug.Log("Door has been destroyed");
             Destroy(gameObject);
 
-            lever_interact.ResetLeverTrigger();
         }
     }
 }

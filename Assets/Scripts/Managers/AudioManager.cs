@@ -39,6 +39,11 @@ public class AudioManager : MonoBehaviour
         Play("BGM");
     }
 
+    public void Click()
+    {
+        Play("Click");
+    }
+
     // Plays a sound given the sound name
     public void Play(string name)
     {

@@ -36,12 +36,22 @@ public class Interaction : MonoBehaviour
     {
         if (triggered & Input.GetKeyDown(KeyCode.R))
         {
-            Debug.Log("Button 'R' has been pressed");
-            lever_trigger = true;
-            
+            if (lever_trigger)
+            {
+                spriteRenderer.sprite = originalSprite;
+                lever_trigger = false;
+            }
+            else
+            {
+                Debug.Log("Button 'R' has been pressed");
+                lever_trigger = true;
+            }
+
+            FindObjectOfType<AudioManager>().Play("Lever");
+
         }
 
-        if (GameObject.Find("Door") == true)
+        if (!lever_trigger)
         {
             spriteRenderer.sprite = originalSprite;
         }

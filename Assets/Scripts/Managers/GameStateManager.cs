@@ -10,7 +10,7 @@ public class GameStateManager : MonoBehaviour
     [SerializeField] private string m_TitleScreenName;
     [SerializeField] private string m_GameOverScreenName, m_VictoryScreenName;
 
-    public int currentLevel, previousLevel;
+    private int currentLevel;
 
     private static GameStateManager _instance;
 
@@ -99,6 +99,7 @@ public class GameStateManager : MonoBehaviour
     //Restarts previous level
     public static void RestartPreviousLevel(int previousLevel)
     {
+        Debug.Log("Previous Level Index: " + previousLevel);
         SceneManager.LoadScene(_instance.m_Levels[previousLevel]);
 
         if (_instance.m_Levels.Count <= _instance.currentLevel)
@@ -123,7 +124,7 @@ public class GameStateManager : MonoBehaviour
     }
 
     //QuitGame
-    public void QuitGame()
+    public static void QuitGame()
     {
         Application.Quit();
     }

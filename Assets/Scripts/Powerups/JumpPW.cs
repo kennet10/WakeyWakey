@@ -17,6 +17,7 @@ public class JumpPW : MonoBehaviour {
             if (playerScript) {
                 playerScript.ChangeJumpForce(increase);
                 Destroy(gameObject);
+                FindObjectOfType<AudioManager>().Play("Boost");
             }
 
             isUsed = true;

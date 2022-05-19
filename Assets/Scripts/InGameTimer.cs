@@ -26,13 +26,13 @@ public class InGameTimer : MonoBehaviour
 
     private AudioManager audioManager;
 
+    private GameObject player;
+
     //Starts running once the object to which this script is attached is enabled
     private void Start()
     {
         audioManager = FindObjectOfType<AudioManager>();
 
-        //Records level num 
-        LevelRecorder.SetPreviousLevel();
 
         //Zeros timer and deactivates it
         TimeDisplay.text = "00:00.00";
@@ -46,6 +46,9 @@ public class InGameTimer : MonoBehaviour
     //Function that activates timer and calls the coroutine when called
     public void StartTimer()
     {
+        //records current level
+        LevelRecorder.SetTryAgainLevel();
+
         TimerActive = true;
         StartCoroutine(UpdateTimer());
     }
@@ -104,8 +107,12 @@ public class InGameTimer : MonoBehaviour
             {
                 EndTimer();
                 audioManager.Play("Game Over");
-                LevelRecorder.SetPreviousLevel();
-                Debug.Log("Previous Level Set");
+
+                //player can no longer move
+                player = GameObject.Find("Player");
+                PlayerController playerScript = player.GetComponent<PlayerController>();
+                playerScript.SetMoveSpeed(0);
+
                 yield return new WaitForSeconds(2);
 
                 GameStateManager.EndGame();

@@ -17,6 +17,7 @@ public class SpeedPW : MonoBehaviour {
             if (playerScript) {
                 playerScript.ChangeMoveSpeed(increase);
                 Destroy(gameObject);
+                FindObjectOfType<AudioManager>().Play("Boost");
             }
 
             isUsed = true;

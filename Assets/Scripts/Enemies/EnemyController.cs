@@ -8,8 +8,8 @@ public class EnemyController : MonoBehaviour
     //reference variable for alarm clock prefab and powerup prefabs
     public GameObject alarmClockPrefab, jumpPrefab, speedPrefab, doorPrefab;
 
-    //reference variables for player object and clock object, and the powerup objects
-    private GameObject player, clock, jump, speed, door;
+    //reference variables for player object clock object, powerup objects, door, and lever
+    private GameObject player, clock, jump, speed, door, lever;
 
     //finds Patroller script on this enemy object
     private Patroller patrolPath;
@@ -29,6 +29,9 @@ public class EnemyController : MonoBehaviour
     private bool isJump;
     private bool isSpeed;
     private bool isDoor;
+    
+    //sets up variable to store Interaction script
+    private Interaction lever_interact;
 
     private void Awake()
     {
@@ -72,6 +75,14 @@ public class EnemyController : MonoBehaviour
             //finds door's starting point in the scene and records it
             door = GameObject.Find("Door");
             doorOriginalPos = door.transform.position;
+
+        }
+
+        if (GameObject.Find("Interaction") == true)
+        {
+            //Getting lever interactin script
+            lever = GameObject.Find("Interaction");
+            lever_interact = lever.GetComponent<Interaction>();
 
         }
 
@@ -176,6 +187,9 @@ public class EnemyController : MonoBehaviour
                 Door.transform.position = doorOriginalPos;
             }
         }
+
+        //resets lever_trigger of Interaction to false
+        lever_interact.ResetLeverTrigger();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

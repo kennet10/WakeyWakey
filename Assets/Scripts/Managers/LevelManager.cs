@@ -41,5 +41,6 @@ public class LevelManager : MonoBehaviour
     public void QuitToTitle()
     {
         GameStateManager.QuitToTitle();
+
     }
 }
