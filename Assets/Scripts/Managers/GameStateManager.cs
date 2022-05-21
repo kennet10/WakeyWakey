@@ -65,7 +65,7 @@ public class GameStateManager : MonoBehaviour
         m_State = GAMESTATE.PLAYING;
         _instance.currentLevel++;
 
-        if (_instance.m_Levels.Count >= _instance.currentLevel)
+        if (_instance.m_Levels.Count > _instance.currentLevel)
         {
             Debug.Log("Level Index:" + _instance.currentLevel);
             SceneManager.LoadScene(_instance.m_Levels[_instance.currentLevel]);
