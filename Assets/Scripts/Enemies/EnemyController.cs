@@ -33,6 +33,10 @@ public class EnemyController : MonoBehaviour
     //sets up variable to store Interaction script
     private Interaction lever_interact;
 
+    //sets up variable to store door lists
+    private List<string> doorLeversTrue = new List<string>();
+    private List<string> doorLeversFalse = new List<string>();
+
     private void Awake()
     {
         //finds player's starting point in the scene and records it
@@ -75,6 +79,10 @@ public class EnemyController : MonoBehaviour
             //finds door's starting point in the scene and records it
             door = GameObject.Find("Door");
             doorOriginalPos = door.transform.position;
+            //gets list for LeversTrue and LeversFalse from door
+            DoorDestroy doorScript = door.GetComponent<DoorDestroy>();
+            doorLeversTrue = doorScript.m_LeversTrue;
+            doorLeversFalse = doorScript.m_LeversFalse;
 
         }
 
@@ -185,11 +193,32 @@ public class EnemyController : MonoBehaviour
                 Door.name = "Door";
 
                 Door.transform.position = doorOriginalPos;
+
+                //giving the new door the lever lists
+                DoorDestroy DoorScript = Door.GetComponent<DoorDestroy>();
+                DoorScript.m_LeversTrue = doorLeversTrue;
+                DoorScript.m_LeversFalse = doorLeversFalse;
             }
         }
 
         //resets lever_trigger of Interaction to false
-        lever_interact.ResetLeverTrigger();
+        foreach (string lvr in doorLeversTrue)
+        {
+            lever = GameObject.Find(lvr);
+            lever_interact = lever.GetComponent<Interaction>();
+            lever_interact.ResetLeverTrigger();
+        }
+
+        if (doorLeversFalse != null)
+        {
+            foreach (string lvr in doorLeversFalse)
+            {
+                lever = GameObject.Find(lvr);
+                lever_interact = lever.GetComponent<Interaction>();
+                lever_interact.ResetLeverTrigger();
+            }
+        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
