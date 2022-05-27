@@ -21,6 +21,8 @@ public class PortalManager : MonoBehaviour
     //boolean variabel to check if player has pressed the key already
     private bool isPressed;
 
+    private GameObject portalHint;
+
     private void Start()
     {
         //sets object reference to current game object this script is on
@@ -75,6 +77,13 @@ public class PortalManager : MonoBehaviour
                 Debug.Log("You have been sent to the next level.");
                 isPressed = true;
             }
+
+            //supposed to show hint when player gets close to closed portal
+            //if (!isOpen)
+            //{
+            //    portalHint = GameObject.Find("PortalHint");
+            //    portalHint.SetActive(true);
+            //}
         }
     }
 }

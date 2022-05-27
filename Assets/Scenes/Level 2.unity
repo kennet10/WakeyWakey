@@ -245,7 +245,7 @@ PrefabInstance:
     - target: {fileID: 1951468238826309538, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
       propertyPath: doorPrefab
       value: 
-      objectReference: {fileID: 1492152537}
+      objectReference: {fileID: 2071378727964038406, guid: 3645181462ff2fa41ac65d3e293124cd, type: 3}
     - target: {fileID: 1951468239897130368, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1674,7 +1674,7 @@ PrefabInstance:
     - target: {fileID: 1951468238826309538, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
       propertyPath: doorPrefab
       value: 
-      objectReference: {fileID: 1492152537}
+      objectReference: {fileID: 2071378727964038406, guid: 3645181462ff2fa41ac65d3e293124cd, type: 3}
     - target: {fileID: 1951468239897130368, guid: 05e5dd1c618acf24599d996dc49ab86f, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2265,6 +2265,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -25
       objectReference: {fileID: 0}
+    - target: {fileID: 9121795706365780851, guid: 98afe7a68138b774c90c805a7ec2bef1, type: 3}
+      propertyPath: LevelTimeInSeconds
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 9121795706415851992, guid: 98afe7a68138b774c90c805a7ec2bef1, type: 3}
       propertyPath: m_text
       value: 'Main Menu
@@ -2670,11 +2674,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1492152537 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2071378727964038406, guid: 3645181462ff2fa41ac65d3e293124cd, type: 3}
-  m_PrefabInstance: {fileID: 1103164272}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1575589628
 PrefabInstance:
   m_ObjectHideFlags: 0

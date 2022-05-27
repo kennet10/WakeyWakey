@@ -2268,7 +2268,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9121795706365780851, guid: 98afe7a68138b774c90c805a7ec2bef1, type: 3}
       propertyPath: LevelTimeInSeconds
-      value: 45
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 9121795706415851992, guid: 98afe7a68138b774c90c805a7ec2bef1, type: 3}
       propertyPath: m_text

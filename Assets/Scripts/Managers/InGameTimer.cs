@@ -111,7 +111,7 @@ public class InGameTimer : MonoBehaviour
                 //player can no longer move
                 player = GameObject.Find("Player");
                 PlayerController playerScript = player.GetComponent<PlayerController>();
-                playerScript.SetMoveSpeed(0);
+                playerScript.enabled = false;
 
                 yield return new WaitForSeconds(2);
 
