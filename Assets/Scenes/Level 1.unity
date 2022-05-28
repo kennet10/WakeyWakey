@@ -1610,26 +1610,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 73237990}
     m_Modifications:
-    - target: {fileID: 2126225264741883873, guid: 3440a37bf7a67c84b81a1c32e5b2e28d, type: 3}
-      propertyPath: sounds.Array.size
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126225264741883873, guid: 3440a37bf7a67c84b81a1c32e5b2e28d, type: 3}
-      propertyPath: sounds.Array.data[10].clip
-      value: 
-      objectReference: {fileID: 8300000, guid: 4d360c40081a73542a9379108729507b, type: 3}
-    - target: {fileID: 2126225264741883873, guid: 3440a37bf7a67c84b81a1c32e5b2e28d, type: 3}
-      propertyPath: sounds.Array.data[10].name
-      value: Boost
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126225264741883873, guid: 3440a37bf7a67c84b81a1c32e5b2e28d, type: 3}
-      propertyPath: sounds.Array.data[10].pitch
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2126225264741883873, guid: 3440a37bf7a67c84b81a1c32e5b2e28d, type: 3}
-      propertyPath: sounds.Array.data[10].volume
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2126225264741883874, guid: 3440a37bf7a67c84b81a1c32e5b2e28d, type: 3}
       propertyPath: m_RootOrder
       value: 4

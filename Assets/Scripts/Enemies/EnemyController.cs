@@ -37,6 +37,9 @@ public class EnemyController : MonoBehaviour
     private List<string> doorLeversTrue = new List<string>();
     private List<string> doorLeversFalse = new List<string>();
 
+    //sets up AudioManager
+    private AudioManager aManEnemy;
+
     private void Awake()
     {
         //finds player's starting point in the scene and records it
@@ -98,6 +101,11 @@ public class EnemyController : MonoBehaviour
         patrolPath = GetComponent<Patroller>();
         enemyOriginalPos = transform.position;
 
+    }
+
+    private void Start()
+    {
+        aManEnemy = FindObjectOfType<AudioManager>();
     }
 
     void RestartObjects()
@@ -225,6 +233,7 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            aManEnemy.Play("Reset");
             RestartObjects();
         }
     }

@@ -19,15 +19,20 @@ public class PortalManager : MonoBehaviour
     [SerializeField]
     private GameObject closedPortalText;
 
+    private GameObject timer;
+
     //boolean variable to check if door is open
     private bool isOpen;
 
     //boolean variabel to check if player has pressed the key already
     private bool isPressed;
 
+    private AudioManager aManager;
 
     private void Start()
     {
+        aManager = FindObjectOfType<AudioManager>();
+
         //sets object reference to current game object this script is on
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 
@@ -70,15 +75,16 @@ public class PortalManager : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            FindObjectOfType<AudioManager>().Play("Portal");
 
             if (Input.GetKey(KeyCode.R) == true && isOpen == true && isPressed == false)
             {
+                aManager.Play("Portal");
 
                 GameStateManager.NextLevel();
 
                 Debug.Log("You have been sent to the next level.");
                 isPressed = true;
+                
             }
 
             //shows hint when player gets close to closed portal

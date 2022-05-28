@@ -46,11 +46,15 @@ public class InGameTimer : MonoBehaviour
     //Function that activates timer and calls the coroutine when called
     public void StartTimer()
     {
+
         //records current level
         LevelRecorder.SetTryAgainLevel();
 
         TimerActive = true;
         StartCoroutine(UpdateTimer());
+
+        audioManager.Stop("15 Seconds");
+        audioManager.Stop("Game Over");
     }
 
     //Function that deactivates the timer when called
