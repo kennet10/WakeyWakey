@@ -15,13 +15,16 @@ public class PortalManager : MonoBehaviour
     [SerializeField]
     private Sprite originalSprite;
 
+    //reference variable to set the closedPortalText active
+    [SerializeField]
+    private GameObject closedPortalText;
+
     //boolean variable to check if door is open
     private bool isOpen;
 
     //boolean variabel to check if player has pressed the key already
     private bool isPressed;
 
-    private GameObject portalHint;
 
     private void Start()
     {
@@ -78,12 +81,20 @@ public class PortalManager : MonoBehaviour
                 isPressed = true;
             }
 
-            //supposed to show hint when player gets close to closed portal
-            //if (!isOpen)
-            //{
-            //    portalHint = GameObject.Find("PortalHint");
-            //    portalHint.SetActive(true);
-            //}
+            //shows hint when player gets close to closed portal
+            if (!isOpen)
+            {
+                closedPortalText.SetActive(true);
+            }
+        }
+    }
+
+    //hides hint when player is out of range of closed portal
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            closedPortalText.SetActive(false);
         }
     }
 }
