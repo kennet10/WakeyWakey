@@ -944,7 +944,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 400154134}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.7889867, y: -0.15739429, z: 3.819747}
+  m_LocalPosition: {x: 9.602096, y: -0.15739429, z: 3.819747}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5620,7 +5620,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.87328, y: 1}
+    m_SensorSize: {x: 2.1322956, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -6012,6 +6012,10 @@ PrefabInstance:
     - target: {fileID: 2126225264741883875, guid: 3440a37bf7a67c84b81a1c32e5b2e28d, type: 3}
       propertyPath: m_Name
       value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 2126225264741883875, guid: 3440a37bf7a67c84b81a1c32e5b2e28d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3440a37bf7a67c84b81a1c32e5b2e28d, type: 3}
