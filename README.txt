@@ -1,4 +1,4 @@
-Daniel - ScrumMaster
+Daniel - ScrumMaster & a clown (requested by Daniel himself)
 Cam - Sound Designer
 Jasmine - Artist
 Dylan - Artist
@@ -14,8 +14,3 @@ Use A and D to move left and right. W to jump. Use R to interact with objects.
 Bugs:
 -If there are multiple enemies in a level, only the one that the player dies to will reset, and the rest will not.
 -Occasionally, jumping onto the edge of a platform will reset the player’s jump, making them jump higher than they should be able to.
-
-Big Questions: 
--How would a visual novel aspect (narrative) between levels affect your own playing experience?
--Are there any points in the gameplay where you find yourself confused about the objective?
--Does the game feel too easy or too hard? Why?
