@@ -45,12 +45,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Levels:
+  - VisualTutorial
   - Tutorial
+  - VisualLv1
   - Level 1
+  - VisualLv2
   - Level 2
+  - VisualLv3
   - Level 3
+  - VisualPostLv3
   m_TitleScreenName: Title
   m_GameOverScreenName: GameOver
   m_VictoryScreenName: Victory
   currentLevel: 0
-  previousLevel: 0

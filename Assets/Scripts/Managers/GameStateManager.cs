@@ -6,11 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class GameStateManager : MonoBehaviour
 {
-    [SerializeField] private List<string> m_Levels = new List<string>();
-    [SerializeField] private string m_TitleScreenName;
-    [SerializeField] private string m_GameOverScreenName, m_VictoryScreenName;
+    [SerializeField] public List<string> m_Levels = new List<string>();
+    [SerializeField] public string m_TitleScreenName;
+    [SerializeField] public string m_GameOverScreenName, m_VictoryScreenName;
 
-    private int currentLevel;
+    public int currentLevel;
 
     private static GameStateManager _instance;
 
