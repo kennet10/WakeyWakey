@@ -31,7 +31,6 @@ public class PortalManager : MonoBehaviour
 
     private void Start()
     {
-        aManager = FindObjectOfType<AudioManager>();
 
         //sets object reference to current game object this script is on
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
@@ -75,10 +74,18 @@ public class PortalManager : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            //plays portal sound when portal is open and player is within range
+            if (isOpen)
+            {
+                if (aManager == null)
+                {
+                    aManager = FindObjectOfType<AudioManager>();
+                }
+                aManager.Play("Portal");
+            }
 
             if (Input.GetKey(KeyCode.R) == true && isOpen == true && isPressed == false)
             {
-                aManager.Play("Portal");
 
                 GameStateManager.NextLevel();
 

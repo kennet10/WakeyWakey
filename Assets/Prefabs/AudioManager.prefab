@@ -48,72 +48,78 @@ MonoBehaviour:
   sounds:
   - name: BGM
     clip: {fileID: 8300000, guid: da12ae2416cb9ba488fa8e644944a433, type: 3}
-    volume: 0.1
+    volume: 0.05
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: Footsteps
-    clip: {fileID: 8300000, guid: b232b9f4907cdc04ead732229afac384, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Jump
-    clip: {fileID: 8300000, guid: 2714ab25c97e86347b46731e178de335, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Grab Alarm
-    clip: {fileID: 8300000, guid: 94ae7f4139d6e744691dc69c4330cbd2, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: 30 Seconds
-    clip: {fileID: 8300000, guid: 0ef2c4250bb19ca41be2311b2a057d7c, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: 15 Seconds
-    clip: {fileID: 8300000, guid: 76d4e71caeead914a9575900281bbee4, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
   - name: Game Over
-    clip: {fileID: 8300000, guid: 8cbc923c3d69f534c975cc351d1b42b4, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Portal
-    clip: {fileID: 8300000, guid: aaf8a604db147904aa5e80a51c0e87f6, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Lever
-    clip: {fileID: 8300000, guid: d59ff07393cd48d4e881e42e5665f7ea, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Click
-    clip: {fileID: 8300000, guid: 1d9e4b122b1117148a3ec871d9deee49, type: 3}
+    clip: {fileID: 8300000, guid: 6dc67d9709178704baba86fbc3a027ae, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: Boost
-    clip: {fileID: 8300000, guid: 97faa1db0c927034db092898438a2785, type: 3}
+    clip: {fileID: 8300000, guid: 54365155381b4c9469415f4f39bbd106, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Grab Alarm
+    clip: {fileID: 8300000, guid: a93cade42b2f16e4bbdd316c9a0c6b14, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: 45 Seconds
+    clip: {fileID: 8300000, guid: da0eb6815877d044388f15925331630e, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: c9e63ccd057b70044af37e37275a955b, type: 3}
+    volume: 0.59
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: 15 Seconds
+    clip: {fileID: 8300000, guid: 60807c4cc5dd731428895ae64d22eb36, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Lever
+    clip: {fileID: 8300000, guid: 9d1169b7a15ba3b409ec80680875cfa9, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Footsteps
+    clip: {fileID: 8300000, guid: 49d36e8504d457e4a8dca56563c705a4, type: 3}
+    volume: 0.37
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Portal
+    clip: {fileID: 8300000, guid: 9d7a4a75b1f72a3429113217390db6d4, type: 3}
+    volume: 0.16
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
   - name: Reset
-    clip: {fileID: 8300000, guid: 66a253426bac0094780280c1706b22ee, type: 3}
+    clip: {fileID: 8300000, guid: 9397bfbea81440b44ba71a2d5f04a870, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: 30 Seconds
+    clip: {fileID: 8300000, guid: ccc782c6bdc638e47969741b970898d5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Click
+    clip: {fileID: 8300000, guid: 17e8fe624a0e0ef4ea016de9e92273a6, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -128,7 +134,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 1d9e4b122b1117148a3ec871d9deee49, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 17e8fe624a0e0ef4ea016de9e92273a6, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

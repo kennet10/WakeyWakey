@@ -9,21 +9,36 @@ EditorBuildSettings:
     path: Assets/Scenes/Title.unity
     guid: 59daec34c846d7c4583fe33478cc0302
   - enabled: 1
+    path: Assets/Scenes/VisualTutorial.unity
+    guid: baf4d37c71e44834f899a253dd56cf12
+  - enabled: 1
     path: Assets/Scenes/Tutorial.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/VisualLv1.unity
+    guid: 98d512a489a628f42affec7d3432c081
   - enabled: 1
     path: Assets/Scenes/Level 1.unity
     guid: f2009a8d9e897f34f9f5a738b1ee579f
   - enabled: 1
+    path: Assets/Scenes/VisualLv2.unity
+    guid: 71e94dc9478871743949c2b96071d562
+  - enabled: 1
     path: Assets/Scenes/Level 2.unity
     guid: 5c3d3365a09e6c74f84318ee07968a0c
+  - enabled: 1
+    path: Assets/Scenes/VisualLv3.unity
+    guid: 274414e82402c6043ba4aab69c01febc
   - enabled: 1
     path: Assets/Scenes/Level 3.unity
     guid: 9fbbc3315a2e6ec43a43d7805273268b
   - enabled: 1
-    path: Assets/Scenes/Victory.unity
-    guid: 6579ea21b0d0b8547b9f64d1368b4cde
+    path: Assets/Scenes/VisualPostLv3.unity
+    guid: c5fd86b35850a2141abd59cc26dd0b5a
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: f87b281e4a73ea24ead7ebc74692d0ba
+  - enabled: 1
+    path: Assets/Scenes/Victory.unity
+    guid: 6579ea21b0d0b8547b9f64d1368b4cde
   m_configObjects: {}

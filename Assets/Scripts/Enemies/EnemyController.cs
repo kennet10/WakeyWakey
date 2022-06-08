@@ -9,7 +9,7 @@ public class EnemyController : MonoBehaviour
     public GameObject alarmClockPrefab, jumpPrefab, speedPrefab, doorPrefab;
 
     //reference variables for player object clock object, powerup objects, door, and lever
-    private GameObject player, clock, jump, speed, door, lever;
+    private GameObject player, clock, jump, speed, door, lever, boostEnable;
 
     //finds Patroller script on this enemy object
     private Patroller patrolPath;
@@ -42,6 +42,9 @@ public class EnemyController : MonoBehaviour
 
     private void Awake()
     {
+        //Gets jumpDestroyed and speedDestroyed to in UIEnable
+        boostEnable = GameObject.Find("UIEnable");
+
         //finds player's starting point in the scene and records it
         player = GameObject.Find("Player");
         playerOriginalPos = player.transform.position;
@@ -110,6 +113,8 @@ public class EnemyController : MonoBehaviour
 
     void RestartObjects()
     {
+        UIEnable boostUI = boostEnable.GetComponent<UIEnable>();
+
         Debug.Log("Restart");
         //resets the player's position
         player.transform.position = playerOriginalPos;
@@ -162,6 +167,8 @@ public class EnemyController : MonoBehaviour
 
                 powerup_jump.transform.position = jumpOriginalPos;
             }
+
+            boostUI.jumpDestroyed = false;
         }
 
         //for the speed powerup prefab
@@ -182,6 +189,8 @@ public class EnemyController : MonoBehaviour
 
                 powerup_speed.transform.position = speedOriginalPos;
             }
+
+            boostUI.speedDestroyed = false;
         }
 
         //for the Door prefab

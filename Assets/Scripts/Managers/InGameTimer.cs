@@ -90,6 +90,16 @@ public class InGameTimer : MonoBehaviour
             //so the line below is used to stabilize it
             yield return null;
 
+            //Play 45 Seconds audio when 45 seconds left
+            if (time == "00:45.00")
+            {
+                if (audioManager == null)
+                {
+                    audioManager = FindObjectOfType<AudioManager>();
+                }
+                audioManager.Play("45 Seconds");
+            }
+
             //Play 30 Seconds audio when 30 seconds left
             if (time == "00:30.00")
             {
@@ -103,6 +113,10 @@ public class InGameTimer : MonoBehaviour
             //Play 15 Seconds audio when 15 seconds left
             if(time == "00:15.00")
             {
+                if (audioManager == null)
+                {
+                    audioManager = FindObjectOfType<AudioManager>();
+                }
                 audioManager.Play("15 Seconds");
             }
 
